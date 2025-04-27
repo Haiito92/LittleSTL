@@ -2,10 +2,22 @@
 //
 
 #include <iostream>
+#include "Collections/SimpleArray.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+   Collections::SimpleArray simpleArray;
+
+   for (size_t i = 0; i < 10; i++)
+   {
+	   simpleArray.PushBack(i * 10);
+   }
+
+   for (size_t i = 0; i < simpleArray.GetSize(); i++)
+   {
+	   std::cout << simpleArray[i] << " ";
+   }
+   std::cout << std::endl;
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
